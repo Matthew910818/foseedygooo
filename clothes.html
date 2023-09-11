@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="stylec.css"> <!-- 鏈接到外部CSS文件 -->
+</head>
+
+
+<body>
+    <header>
+        <h1>Clothes <img src="clothes.png" class="image"> </h1>
+    </header>
+
+    <div class="container">
+        <img src="c1.jpeg">
+        <div class="form">
+            <div class="quantity-container">
+                <button onclick="decreaseQuantity()" class="b">-</button>
+                <p>預購數量: <span id="quantity">0</span></p>
+                <button onclick="increaseQuantity()" class="b">+</button>
+            </div>
+            <button onclick="showInputDialog()">確認</button>
+        </div>
+    </div>
+
+    <script>
+        let currentQuantity = 0;
+
+        function updateQuantity() {
+            const quantityElement = document.getElementById("quantity");
+            quantityElement.textContent = currentQuantity;
+        }
+
+        function increaseQuantity() {
+            currentQuantity++;
+            updateQuantity();
+        }
+
+        function decreaseQuantity() {
+            if (currentQuantity > 0) {
+                currentQuantity--;
+                updateQuantity();
+            }
+        }
+
+        function showInputDialog() {
+            const name = prompt("請輸入您的姓名：");
+            const phoneNumber = prompt("請輸入您的電話號碼：");
+        }
+    </script>
+
+</body>
+
+</html>

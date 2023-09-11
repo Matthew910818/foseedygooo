@@ -1,0 +1,77 @@
+body {
+    background-color: rgb(179, 102, 231);
+}
+
+.image{
+    width: 175px;
+    height: 117px;
+}
+
+h1 {
+    font-size: 60px;
+    text-align: center;
+    font-style: inherit;
+    color: lightyellow;
+}
+
+
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container img{
+    display: block;
+    margin: 0 auto;
+    max-width: 50%;
+    height: auto;
+}
+
+.form {
+    display: flex;
+    font-size: 30px;
+    font-weight: bolder;
+    align-items: center;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.form label,
+.form input {
+    display: block;
+    margin-bottom: 100px;
+}
+
+.quantity-container {
+    display: flex;
+    align-items: center;
+}
+.quantity-container button {
+    margin: 0 10px;
+    font-size: 30px;
+}
+
+.form button {
+    margin-top: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
