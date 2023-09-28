@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width , initial-scale = 1.0" />
+    <link rel="stylesheet" type="text/css" href="styleconfirm.css"> <!-- 鏈接到外部CSS文件 -->
+</head>
+
+
+<body>
+    <div class="container">
+        <form onsubmit="sendEmail(); reset(); return false;">
+            <h3> 確認訂單 </h3>
+            <input type="text" id="name" placeholder="姓名" required>
+            <input type="email" id="email" placeholder="Gmail" required>
+            <input type="text" id="phone" placeholder="電話號碼" required>
+            <input type="text" id="number" placeholder="購買數量" required>
+            <button type="submit"> 送出 </button>
+        </form>
+    </div>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail() {
+            Email.send({
+                Host: "smtp.elasticemail.com",
+                Username: "matthew910818@gmail.com",
+                Password: "C19DEB4693C021E30C4928348637E623EB3E",
+                To: 'matthew910818@gmail.com',
+                From: 'matthew910818@gmail.com',
+                Subject: "訂單確認信",
+                Body: "Name: " + document.getElementById("name").value
+                    + "<br> Email: " + document.getElementById("email").value
+                    + "<br> Phone Number: " + document.getElementById("phone").value
+                    + "<br> 數量: " + document.getElementById("number").value
+            }).then(
+                message => alert("訂單成功！")
+            );
+        }
+    </script>
+</body>
+
+</html>
