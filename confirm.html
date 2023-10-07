@@ -15,6 +15,7 @@
             <input type="text" id="name" placeholder="姓名" required>
             <input type="email" id="email" placeholder="Gmail" required>
             <input type="text" id="phone" placeholder="電話號碼" required>
+            <input type="text" id="color" placeholder="購買顏色" required>
             <input type="text" id="number" placeholder="購買數量" required>
             <button type="submit"> 送出 </button>
         </form>
@@ -32,6 +33,7 @@
                 Body: "Name: " + document.getElementById("name").value
                     + "<br> Email: " + document.getElementById("email").value
                     + "<br> Phone Number: " + document.getElementById("phone").value
+                    + "<br> 數量: " + document.getElementById("color").value
                     + "<br> 數量: " + document.getElementById("number").value
             }).then(
                 message => alert("訂單成功！")

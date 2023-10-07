@@ -1,10 +1,7 @@
 body {
-    background-color: rgb(179, 102, 231);
+    background-color: rgb(30, 189, 128);
 }
 
-.image{
-    width: 175px;
-}
 
 h1 {
     font-size: 60px;
@@ -24,8 +21,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%; 
-    height: 100vh;
 }
 
 .container img{
@@ -50,7 +45,14 @@ body {
     margin-bottom: 100px;
 }
 
-
+.quantity-container {
+    display: flex;
+    align-items: center;
+}
+.quantity-container button {
+    margin: 0 10px;
+    font-size: 30px;
+}
 
 .form{
     margin-top: 10px;
@@ -62,14 +64,7 @@ body {
     color: #000; /* Set the text color */
 }
 
-.swiper{
-    width: 80%;
-    height: fit-content;
-}
 
-.swiper-slide img{
-    width: 100%;
-}
 
 
 

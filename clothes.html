@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width , initial-scale = 1.0" />
     <link rel="stylesheet" type="text/css" href="stylec.css"> <!-- 鏈接到外部CSS文件 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <title>clothes</title>
 </head>
 
@@ -14,12 +15,49 @@
         <h1>Clothes <img src="clothes.png" class="image"> </h1>
     </header>
     <div class="container">
-        <img src="c1.jpeg">
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide"> <img src="c1.png"></div>
+                <div class="swiper-slide"><img src="c2.png"></div>
+                <div class="swiper-slide"><img src="c3.png"></div>
+                <div class="swiper-slide"> <img src="c4.png"></div>
+                <div class="swiper-slide"> <img src="c5.png"></div>
+                <div class="swiper-slide"> <img src="c6.png"></div>
+                <div class="swiper-slide"> <img src="c7.png"></div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+        </div>
         <div class="form">
             <a href="confirm.html">購買</a>
         </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            // Optional parameters
+            loop: true,
 
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
 </body>
 
 </html>
